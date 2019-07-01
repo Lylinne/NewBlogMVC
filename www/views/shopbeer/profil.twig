@@ -1,0 +1,19 @@
+{% extends "layout/all.twig" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+
+{% block content %}
+    <div>
+        <p>Votre Prenom : {{session.user.lastname}} </p>
+        <p>Votre Nom : {{session.user.firstname}} </p>
+        <p>Votre Addresse : {{session.user.adress}} </p>
+        <p>Votre Code-Postal : {{session.user.zipCode}} </p>
+        <p>Votre Ville : {{session.user.city}} </p>
+        <p>Votre Pays : {{session.user.country}} </p>
+        <p>Votre Numéro : {{session.user.phone}} </p>
+        <p>Votre Mail : {{session.user.mail}} </p>
+    </div>
+
+{% endblock %}
+

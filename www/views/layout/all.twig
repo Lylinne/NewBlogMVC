@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Bread Beer Shop {% block title %}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+</head>
+<body>
+	<header class="menu">
+		<input type="checkbox" class="burger">
+		<nav>
+			<ul>
+				<li><a href="/Home">Home</a></li>
+				<li><a href="/boutique">Boutique</a></li>
+				
+					<li><a href="/commande">Bon de commande</a></li>
+					{% if session.user %}
+						<li><a href="/profil">profil</a></li>
+						<li><a href="/deconnect">deconnexion</a></li>
+						
+					{% else %}
+						<li><a href="/connect">Connexion</a></li>
+					{% endif %}
+					
+				
+				
+				<li><a href="/">Blog</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	{% block content%} {% endblock %}
+	<footer>
+		<nav>
+			<ul>
+				<li><a href="#">Mentions Légales</a></li>
+				<li><a href="#">CGV</a></li>
+			</ul>
+		</nav>
+	</footer>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>

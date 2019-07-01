@@ -1,0 +1,10 @@
+{% extends "layout/all.twig" %}
+
+
+{% block content %}
+    {% for beer in beers %}
+        <p>{{beer.title}} :</p>
+        <p>{{beer.getPriceTTC()}}</p>
+         
+    {% endfor %}
+{% endblock %}
